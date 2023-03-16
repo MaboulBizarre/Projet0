@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <link rel="stylesheet" href="styles.css">
         <style>
-            div {
+            .specificities {
                 text-align: left;
             }
             button {
@@ -19,23 +20,23 @@
             <li><a href="index.html">Search</a></li>
             <li><a href="image.html">Image Search</a></li>
         </ul>
-        <form action="https://www.google.com/search" method="get">
-            <div id="specificities">
-                <div>Find pages with all these words
-                    <input type="text" name="as_q">
+        <div class="container">
+            <form action="https://www.google.com/search" method="get">
+                <ol class="specificities">
+                    <li>Find pages with all these words:</li>
+                    <li>Find pages with this exact word or phrase:</li>
+                    <li>Find pages with any of these words:</li>
+                    <li>Find pages with none of these words:</li>
+                </ol>
+                <div class="advancedsearchbar">
+                    <input type="text" name="as_q" class="advancedsearch">
+                    <input type="text" name="as_epq" class="advancedsearch">
+                    <input type="text" name="as_oq" class="advancedsearch">
+                    <input type="text" name="as_eq" class="advancedsearch">
                 </div>
-                <div>Find pages with this exact word or phrase
-                    <input type="text" name="as_epq">
-                </div>
-                <div>Find pages with any of these words
-                    <input type="text" name="as_oq">
-                </div>
-                <div>Find pages with none of these words
-                    <input type="text" name="as_eq">
-                </div>
-            </div>
-            <button input type="submit" value="Advanced Search">
+                <button input type="submit" value="Advanced Search" class="searchbutton">
                 Advanced Search
-            </button>
-        </form>
+                </button>
+            </form>
+        </div>
     </body>
